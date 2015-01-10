@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Registration Form | Pley.com</title>
+<link href="assets/css/stylesheet.css"  media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="UTF-8" src="assets/js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<!-- registeration form coding starts here -->
+<div class="logo"><img src="assets/images/pley-logo.png" alt="pley logo"></div>
+  <form class="register">
+
+    <!-- <div class="register-switch">
+      <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+      <label for="sex_f" class="register-switch-label">Female</label>
+      <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+      <label for="sex_m" class="register-switch-label">Male</label>
+    </div> -->
+
+    <input type="text" id="firstname" class="register-input" placeholder="First Name" data-message="We need your first name!" data-prompt="firstnameprompt" required />
+
+    <input type="text" id="lastname" class="register-input" placeholder="Last Name" data-message="We need your last name!" data-prompt="lastnameprompt" required />
+
+    <input type="email" id="email" class="register-input" placeholder="Email Address" data-message="We need your e-mail address!" data-prompt="emailprompt" required />
+
+    <input type="password" id="password" class="register-input" placeholder="Password" data-message="We need your password!" data-prompt="passwordprompt" required />
+
+    <input type="submit" value="Create Account" class="register-button" id="submit" onclick="redirect();">
+
+  </form>
+
+  <div class="result"> </div>
+
+<script>
+$.post( "success.html", function( data ) {
+  $( ".result" ).html( data );
+});
+</script>
+
+</body>
+
+</html>
